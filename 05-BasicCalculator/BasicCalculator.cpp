@@ -9,31 +9,41 @@ Calculator using functions, case, user input, etc.
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
-void AdditionFunc();
-void SubtractionFunc();
-void MultiplicationFunc();
-void DivisionFunc();
-void ExponentFunc();
-void SqrtFunc();
-
 int Operator;
 double Num1;
 double Num2;
 double Answer;
 
+void AdditionFunc() {
+    Answer = Num1 + Num2;
+}
+void SubtractionFunc() {
+    Answer = Num1 - Num2;
+}
+void MultiplicationFunc() {
+    Answer = Num1 * Num2;
+}
+void DivisionFunc() {
+    Answer = Num1 / Num2;
+}
+void ExponentFunc() {
+    Answer = pow(Num1, Num2);
+}
+void SqrtFunc() {
+    Answer = sqrt(Num1);
+}
+
 int main() {
 
-    cout << "This is a basic calculator. \n";
-    cout << "Please ensure you're typing the number of the operation you'd like to perform: \n";
-    cout << "[1]: Addition\n [2]: Subtraction\n [3]: Multiplication\n [4]: Division\n [5]: Exponent\n [6]: Square Root\n";
-    cout << "\n \n Please choose an option from the list above: ";
-    cin >> Operator;
-    cout << "\n \n Please enter the base number in the equation: ";
-    cin >> Num1;
-    cout << "\n Please enter the secondary number in the equation (if none, leave blank): ";
-    cin >> Num2;
+    std::cout << "This is a basic calculator. \n";
+    std::cout << "Please ensure you're typing the number of the operation you'd like to perform: \n";
+    std::cout << "[1]: Addition\n [2]: Subtraction\n [3]: Multiplication\n [4]: Division\n [5]: Exponent\n [6]: Square Root\n";
+    std::cout << "\n \n Please choose an option from the list above: ";
+    std::cin >> Operator;
+    std::cout << "\n \n Please enter the base number in the equation: ";
+    std::cin >> Num1;
+    std::cout << "\n Please enter the secondary number in the equation (if none, leave blank): ";
+    std::cin >> Num2;
 
     switch (Operator) {
 
@@ -62,28 +72,9 @@ int main() {
         break;
     }
 
-    cout << "The answer is: ";
-    cout << Answer;
+    std::cout << "The answer is: ";
+    std::cout << Answer;
     return 0;
 
-}
-
-void AdditionFunc() {
-    Answer = Num1 + Num2;
-}
-void SubtractionFunc() {
-    Answer = Num1 - Num2;
-}
-void MultiplicationFunc() {
-    Answer = Num1 * Num2;
-}
-void DivisionFunc() {
-    Answer = Num1 / Num2;
-}
-void ExponentFunc() {
-    Answer = pow(Num1, Num2);
-}
-void SqrtFunc() {
-    Answer = sqrt(Num1);
 }
 
